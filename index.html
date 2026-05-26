@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Troje — Museo Local | Almoloya, Hidalgo</title>
+  <meta name="description"
+    content="Catálogo del museo local del Restaurante La Troje en Almoloya, Hidalgo. Descubre piezas históricas que narran la cultura y tradiciones de la región." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <main class="museum-page">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <h1 class="museum-title">
+        "La Troje"
+        <span>Museo Local</span>
+      </h1>
+
+      <div class="logo-container" id="sidebar-card" role="button" tabindex="0" aria-label="Sobre el museo La Troje">
+        <img src="img/logo.png" alt="Logo La Troje" class="main-logo" />
+        <h2 class="logo-text">Almoloya, Hidalgo</h2>
+      </div>
+    </aside>
+
+    <!-- ===== CARDS GRID ===== -->
+    <section id="cards-grid" class="cards-grid" aria-label="Piezas del museo"></section>
+  </main>
+
+  <!-- ===== DETAIL MODAL ===== -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle de pieza">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Cerrar detalle">&times;</button>
+      <div id="modal-image-area" class="modal-image-area">
+        <img id="modal-image" src="" alt="" />
+        <span class="modal-image-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+          </svg>
+          Click para ampliar
+        </span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-header-content">
+          <img src="img/logo.png" alt="Logo" class="modal-logo" />
+          <div class="modal-title-group">
+            <h2 id="modal-title" class="modal-piece-title"></h2>
+            <h3 class="modal-subtitle">¿Qué es?</h3>
+          </div>
+        </div>
+        <div id="modal-separator" class="modal-separator"></div>
+        <div id="modal-keywords" class="modal-keywords"></div>
+        <div id="modal-description" class="modal-description"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox-overlay" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+    <img id="lightbox-image" src="" alt="" />
+  </div>
+
+  <!-- ===== SIDEBAR MODAL ===== -->
+  <div id="sidebar-modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Sobre el Museo La Troje">
+    <div class="modal-backdrop" id="sidebar-modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="sidebar-modal-close" class="modal-close" aria-label="Cerrar">&times;</button>
+
+      <!-- Animated infinite scene banner -->
+      <div class="sidebar-modal-scene">
+        <div class="scene-layer scene-layer--back"></div>
+        <div class="scene-layer scene-layer--mid"></div>
+        <div class="scene-layer scene-layer--front"></div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-header-content">
+          <img src="img/logo.png" alt="Logo" class="modal-logo" />
+          <div class="modal-title-group">
+            <h2 class="modal-piece-title">Restaurante La Troje</h2>
+            <h3 class="modal-subtitle">Almoloya, Hidalgo</h3>
+          </div>
+        </div>
+        <div class="modal-separator sidebar-separator" style="background-color: #C5A96D;">✦</div>
+        <div class="modal-description sidebar-modal-text">
+          <p>Fundado y atendido con el corazón por sus dueños, los esposos <strong>Silvia Cerón Saavedra</strong> y <strong>Carlos Rodda Ortega</strong>, Restaurant La Troje es un rincón lleno de nostalgia y calidez que en septiembre de 2026 celebra con orgullo sus primeros <strong>10 años de historia</strong>.</p>
+          <p>En nuestra casa, el aroma a auténtica comida tradicional te envuelve mientras viajas en el tiempo gracias a una decoración única, rodeada de fotografías antiguas y valiosas piezas históricas que rinden tributo a la hermosa tradición del pulque.</p>
+          <p>Esta atmósfera tan viva y hospitalaria ha hecho que La Troje sea el lugar favorito tanto de viajeros internacionales de países como Canadá, España e Italia, como de grandes personalidades que nos han honrado con su mesa — entre ellos el escritor <em>Carlos Fuentes</em>, el gobernador <em>Julio Menchaca</em>, el torero <em>Federico Pizarro</em> y los músicos de <em>La Trakalosa de Monterrey</em> —, además de toda la gente de la localidad que aprecia comer y pasar un buen rato en el sitio.</p>
+        </div>
+        <p class="sidebar-modal-footer">— Almoloya, Hidalgo · Desde 2016 —</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DECORATIVE ELEMENTS ===== -->
+  <svg class="deco-dots" aria-hidden="true" width="120" height="120" viewBox="0 0 120 120"
+    xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="2" fill="currentColor" />
+    <circle cx="40" cy="10" r="2" fill="currentColor" />
+    <circle cx="70" cy="10" r="2" fill="currentColor" />
+    <circle cx="100" cy="10" r="2" fill="currentColor" />
+    <circle cx="10" cy="40" r="2" fill="currentColor" />
+    <circle cx="40" cy="40" r="2" fill="currentColor" />
+    <circle cx="70" cy="40" r="2" fill="currentColor" />
+    <circle cx="100" cy="40" r="2" fill="currentColor" />
+    <circle cx="10" cy="70" r="2" fill="currentColor" />
+    <circle cx="40" cy="70" r="2" fill="currentColor" />
+    <circle cx="70" cy="70" r="2" fill="currentColor" />
+    <circle cx="100" cy="70" r="2" fill="currentColor" />
+    <circle cx="10" cy="100" r="2" fill="currentColor" />
+    <circle cx="40" cy="100" r="2" fill="currentColor" />
+    <circle cx="70" cy="100" r="2" fill="currentColor" />
+    <circle cx="100" cy="100" r="2" fill="currentColor" />
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
